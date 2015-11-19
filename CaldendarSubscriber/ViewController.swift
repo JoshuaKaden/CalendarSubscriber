@@ -7,19 +7,41 @@
 //
 
 import UIKit
+import EventKit
 
 class ViewController: UIViewController {
 
+    private let eventStore = EKEventStore()
+    
+    override func loadView() {
+        self.view = CalendarView()
+    }
+    
+    private func calendarView() -> CalendarView {
+        return self.view as! CalendarView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.eventStoreChanged()
+        eventStore.requestAccessToEntityType(.Event) { (granted, error) -> Void in
+            self.eventStoreChanged()
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventStoreChanged", name: EKEventStoreChangedNotification, object: eventStore)
+        
+        let calendarView = self.calendarView()
+        calendarView.buttonTapAction = { [weak calendarView] in
+            guard let urlString = calendarView?.subscribeToText else { return }
+            guard let url = NSURL(string: urlString) else { return }
+            UIApplication.sharedApplication().openURL(url)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func eventStoreChanged() {
+        let calendars: [EKCalendar] = eventStore.calendarsForEntityType(.Event)
+        self.calendarView().listLabelText = calendars.map{$0.title}.reduce("", combine: { $0 + "\n" + $1 })
     }
-
 
 }
-

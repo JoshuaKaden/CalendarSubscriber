@@ -14,6 +14,10 @@
 		935388161BFE79FB002987F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935388141BFE79FB002987F3 /* LaunchScreen.storyboard */; };
 		935388211BFE79FC002987F3 /* CaldendarSubscriberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935388201BFE79FC002987F3 /* CaldendarSubscriberTests.swift */; };
 		9353882C1BFE79FC002987F3 /* CaldendarSubscriberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353882B1BFE79FC002987F3 /* CaldendarSubscriberUITests.swift */; };
+		9353883C1BFE7B67002987F3 /* TapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935388391BFE7B67002987F3 /* TapButton.swift */; };
+		9353883D1BFE7B67002987F3 /* UIButton+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353883A1BFE7B67002987F3 /* UIButton+Setup.swift */; };
+		9353883E1BFE7B67002987F3 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353883B1BFE7B67002987F3 /* UIView+Layout.swift */; };
+		935388401BFE7BBA002987F3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9353883F1BFE7BBA002987F3 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		935388271BFE79FC002987F3 /* CaldendarSubscriberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaldendarSubscriberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9353882B1BFE79FC002987F3 /* CaldendarSubscriberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaldendarSubscriberUITests.swift; sourceTree = "<group>"; };
 		9353882D1BFE79FC002987F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		935388391BFE7B67002987F3 /* TapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapButton.swift; sourceTree = "<group>"; };
+		9353883A1BFE7B67002987F3 /* UIButton+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Setup.swift"; sourceTree = "<group>"; };
+		9353883B1BFE7B67002987F3 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		9353883F1BFE7BBA002987F3 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				9353880B1BFE79FB002987F3 /* AppDelegate.swift */,
-				9353880D1BFE79FB002987F3 /* ViewController.swift */,
-				9353880F1BFE79FB002987F3 /* Main.storyboard */,
 				935388121BFE79FB002987F3 /* Assets.xcassets */,
-				935388141BFE79FB002987F3 /* LaunchScreen.storyboard */,
 				935388171BFE79FC002987F3 /* Info.plist */,
+				935388141BFE79FB002987F3 /* LaunchScreen.storyboard */,
+				9353880F1BFE79FB002987F3 /* Main.storyboard */,
+				935388391BFE7B67002987F3 /* TapButton.swift */,
+				9353883A1BFE7B67002987F3 /* UIButton+Setup.swift */,
+				9353883B1BFE7B67002987F3 /* UIView+Layout.swift */,
+				9353880D1BFE79FB002987F3 /* ViewController.swift */,
+				9353883F1BFE7BBA002987F3 /* CalendarView.swift */,
 			);
 			path = CaldendarSubscriber;
 			sourceTree = "<group>";
@@ -257,7 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9353880E1BFE79FB002987F3 /* ViewController.swift in Sources */,
+				9353883D1BFE7B67002987F3 /* UIButton+Setup.swift in Sources */,
+				935388401BFE7BBA002987F3 /* CalendarView.swift in Sources */,
+				9353883C1BFE7B67002987F3 /* TapButton.swift in Sources */,
 				9353880C1BFE79FB002987F3 /* AppDelegate.swift in Sources */,
+				9353883E1BFE7B67002987F3 /* UIView+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
