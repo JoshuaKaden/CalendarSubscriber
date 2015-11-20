@@ -39,6 +39,10 @@ class ViewController: UIViewController {
         }
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     func eventStoreChanged() {
         let calendars: [EKCalendar] = eventStore.calendarsForEntityType(.Event)
         self.calendarView().listLabelText = calendars.map{$0.title}.reduce("", combine: { $0 + "\n" + $1 })
